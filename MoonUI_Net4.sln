@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonUI_Net4", "MoonUI_Net4\MoonUI_Net4.csproj", "{a7c87448-8845-4d45-a38f-e36e0b6d5715}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7C87448-8845-4D45-A38F-E36E0B6D5715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C87448-8845-4D45-A38F-E36E0B6D5715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C87448-8845-4D45-A38F-E36E0B6D5715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C87448-8845-4D45-A38F-E36E0B6D5715}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

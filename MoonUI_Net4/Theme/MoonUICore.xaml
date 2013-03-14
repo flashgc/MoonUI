@@ -1,0 +1,1876 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MoonUI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" mc:Ignorable="d">
+
+
+	<Color x:Key="Fill_active_top">#FF8FC1E5</Color>
+	<Color x:Key="Fill_active_bottom">#FF6bacdd</Color>
+	<Color x:Key="Fill_active_bottom_dark">#FF5699cc</Color>
+	<Color x:Key="Stroke_active_top">#FF5cace8</Color>
+	<Color x:Key="Stroke_active_bottom">#FF3c95d7</Color>
+	<Color x:Key="Stroke_active_light">#FFb3d4ec</Color>
+
+	<Color x:Key="Fill_orange_normal_top">#FFf2b50e</Color>
+	<Color x:Key="Fill_orange_normal_bottom">#FFefa307</Color>
+	<Color x:Key="Fill_orange_over_bottom">#FFe09707</Color>
+	<Color x:Key="Stroke_orange_top">#FFf0a808</Color>
+	<Color x:Key="Stroke_orange_bottom">#FFd38d03</Color>
+	<Color x:Key="Stroke_orange_light">#FFffd566</Color>
+
+	<Color x:Key="Fill_normal_top">#FFF9F9F9</Color>
+	<Color x:Key="Fill_normal_bottom">#FFE9E9E9</Color>
+	<Color x:Key="BorderStroke_top">#FFCACACA</Color>
+	<Color x:Key="BorderStroke_bottom">#FFAFAFAF</Color>
+	<Color x:Key="Fill_over_top">#FFDBDBDB</Color>
+	<Color x:Key="Fill_over_bottom">#FFF6F6F6</Color>
+	<Color x:Key="Fill_pressed_light">#FF6D6D6D</Color>
+	<Color x:Key="Fill_pressed_dark">#FF545454</Color>
+	<Brush x:Key="Fill_pressed_light_">#FF6D6D6D</Brush>
+	<Brush x:Key="Fill_pressed_dark_">#FF545454</Brush>
+
+	<Brush x:Key="Shadow_first_color">#19000000</Brush>
+	<Brush x:Key="Shadow_second_color">#0C000000</Brush>
+
+	<Color x:Key="CheckBox_main_color">#FFd7d7d7</Color>
+	<Brush x:Key="CheckBox_main_color_">#FFd7d7d7</Brush>
+	<Color x:Key="CheckBox_stroke_color">#FFbababa</Color>
+	<Brush x:Key="CheckBox_stroke_color_">#FFbababa</Brush>
+	<Color x:Key="CheckBox_fill_top">#FFfafafa</Color>
+	<Color x:Key="CheckBox_fill_bottom">#FFe9e9e9</Color>
+	<Brush x:Key="CheckBox_fill_bottom_">#FFe9e9e9</Brush>
+
+	<Color x:Key="TextBox_fill">#FFeeeeee</Color>
+	<Brush x:Key="TextBox_fill_">#FFeeeeee</Brush>
+	
+	<Color x:Key="Text_dark">#FF515151</Color>
+	<Brush x:Key="Text_dark_">#FF515151</Brush>
+	<Brush x:Key="Text_light_">#FFFFFFFF</Brush>
+
+	<Style TargetType="{x:Type Button}">
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+		<Setter Property="Height" Value="36" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Pressed">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<DoubleAnimation Duration="0" To="0.239" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}"/>
+										</ObjectAnimationUsingKeyFrames>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="PointerOver">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Normal">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Focused"/>
+								<VisualState x:Name="PointerFocused"/>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Rectangle RadiusY="5" RadiusX="5" Fill="{StaticResource Shadow_second_color}" Margin="0,1,0,-1" d:IsHidden="True"/>
+						<Rectangle RadiusY="4" RadiusX="4" Fill="{StaticResource Shadow_first_color}" Margin="1,0"/>
+						<Rectangle x:Name="rectangle" RadiusY="2" RadiusX="2" Margin="1,0,1,1">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource Fill_normal_top}"/>
+									<GradientStop Color="{StaticResource Fill_normal_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+							<Rectangle.Stroke>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource BorderStroke_top}"/>
+									<GradientStop Color="{StaticResource BorderStroke_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Stroke>
+						</Rectangle>
+						
+
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock1" Margin="0,1,0,-1" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock" Margin="0" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="{StaticResource Text_dark_}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" Padding="{TemplateBinding Padding}"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="ButtonGreen" TargetType="{x:Type Button}">
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Pressed">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}"/>
+										</ObjectAnimationUsingKeyFrames>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+														<GradientStop Color="{StaticResource BorderStroke_top}"/>
+														<GradientStop Color="{StaticResource BorderStroke_bottom}" Offset="1"/>
+													</LinearGradientBrush>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ColorAnimation Duration="0" To="{StaticResource BorderStroke_top}" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF566671" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="#FF85A420" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FFB6D846" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Normal">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="#FFB6D846" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Focused"/>
+								<VisualState x:Name="PointerFocused"/>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Rectangle RadiusY="5" RadiusX="5" Fill="{StaticResource Shadow_second_color}" Margin="0,1,0,-1"/>
+						<Rectangle RadiusY="4" RadiusX="4" Fill="{StaticResource Shadow_first_color}"/>
+						<Rectangle x:Name="rectangle" RadiusY="2" RadiusX="2" Margin="1,0,1,1">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#FFB6D846"/>
+									<GradientStop Color="#FF93B329" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+							<Rectangle.Stroke>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#FF62A921"/>
+									<GradientStop Color="#FF529C25" Offset="0.999"/>
+								</LinearGradientBrush>
+							</Rectangle.Stroke>
+						</Rectangle>
+						<Path x:Name="path" Data="M2.75,4.66667 L121.083,4.66667" Fill="White" Margin="2.5,1.334,2.5,0" Stretch="Fill" Stroke="#FFD9FA73" UseLayoutRounding="False" Height="1" VerticalAlignment="Top"/>
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock1" Margin="6,9.5,6.5,7" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock" Margin="6,8,6,9" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="ButtonBlue" TargetType="{x:Type Button}">
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Pressed">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+														<GradientStop Color="{StaticResource BorderStroke_top}"/>
+														<GradientStop Color="{StaticResource BorderStroke_bottom}" Offset="1"/>
+													</LinearGradientBrush>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ColorAnimation Duration="0" To="{StaticResource BorderStroke_top}" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF566671" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_bottom_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Normal">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#3B000000" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Focused"/>
+								<VisualState x:Name="PointerFocused"/>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Rectangle RadiusY="5" RadiusX="5" Fill="{StaticResource Shadow_second_color}" Margin="0,1,0,-1"/>
+						<Rectangle RadiusY="4" RadiusX="4" Fill="{StaticResource Shadow_first_color}"/>
+						<Rectangle x:Name="rectangle" RadiusY="2" RadiusX="2" Margin="1,0,1,1">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource Fill_active_top}"/>
+									<GradientStop Color="{StaticResource Fill_active_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+							<Rectangle.Stroke>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource Stroke_active_top}" Offset="0.015"/>
+									<GradientStop Color="{StaticResource Stroke_active_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Stroke>
+						</Rectangle>
+						<Path x:Name="path" Data="M2.75,4.66667 L121.083,4.66667" Fill="White" Margin="2.5,1.334,2.5,0" Stretch="Fill" UseLayoutRounding="False" Height="1" VerticalAlignment="Top">
+							<Path.Stroke>
+								<SolidColorBrush Color="{StaticResource Stroke_active_light}"/>
+							</Path.Stroke>
+						</Path>
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock1" Margin="6,9,6,7" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" RenderTransformOrigin="0.5,0.5"/>
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock" Margin="6,8,6,9" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+    
+	<Style x:Key="ButtonOrange" TargetType="{x:Type Button}">
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Pressed">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<DoubleAnimation Duration="0" To="0.239" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}"/>
+										</ObjectAnimationUsingKeyFrames>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+														<GradientStop Color="{StaticResource BorderStroke_top}"/>
+														<GradientStop Color="{StaticResource BorderStroke_bottom}" Offset="1"/>
+													</LinearGradientBrush>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ColorAnimation Duration="0" To="{StaticResource BorderStroke_top}" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF566671" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_over_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Normal">
+									<Storyboard>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Focused"/>
+								<VisualState x:Name="PointerFocused"/>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Rectangle RadiusY="5" RadiusX="5" Fill="{StaticResource Shadow_second_color}" Margin="0,1,0,-1"/>
+						<Rectangle RadiusY="4" RadiusX="4" Fill="{StaticResource Shadow_first_color}"/>
+						<Rectangle x:Name="rectangle" RadiusY="2" RadiusX="2" Margin="1,0,1,1">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource Fill_orange_normal_top}"/>
+									<GradientStop Color="{StaticResource Fill_orange_normal_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+							<Rectangle.Stroke>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource Stroke_orange_top}"/>
+									<GradientStop Color="{StaticResource Stroke_orange_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Stroke>
+						</Rectangle>
+						<Path x:Name="path" Data="M2.75,4.66667 L121.083,4.66667" Fill="White" Margin="2.5,1.334,2.5,0" Stretch="Fill" UseLayoutRounding="False" Height="1" VerticalAlignment="Top">
+							<Path.Stroke>
+								<SolidColorBrush Color="{StaticResource Stroke_orange_light}"/>
+							</Path.Stroke>
+						</Path>
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock1" Margin="6,9.5,6.5,7" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+						<TextBlock HorizontalAlignment="Stretch"
+							VerticalAlignment="Center" x:Name="textBlock" Margin="6,8,6,9" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="CheckBoxSwitcher" TargetType="{x:Type CheckBox}">
+		<Setter Property="Foreground" Value="#FF313131" />
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type CheckBox}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="37"/>
+							<ColumnDefinition Width="23*"/>
+						</Grid.ColumnDefinitions>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0:0:0.2"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="PointerOver"/>
+								<VisualState x:Name="Pressed"/>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="ellipse">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<SolidColorBrush Color="#FFD7D7D7"/>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ellipse1">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="CheckedPointerOver"/>
+								<VisualState x:Name="CheckedPressed"/>
+								<VisualState x:Name="CheckedDisabled"/>
+								<VisualState x:Name="Indeterminate2"/>
+								<VisualState x:Name="IndeterminatePointerOver"/>
+								<VisualState x:Name="IndeterminatePressed"/>
+								<VisualState x:Name="IndeterminateDisabled"/>
+								<VisualState x:Name="Normal"/>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="CheckStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0:0:0.2">
+										<VisualTransition.GeneratedEasingFunction>
+											<QuinticEase EasingMode="EaseOut"/>
+										</VisualTransition.GeneratedEasingFunction>
+									</VisualTransition>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Checked">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+														<GradientStop Color="#FF8FC1E5" Offset="1"/>
+														<GradientStop Color="#FF8FC1E5"/>
+													</LinearGradientBrush>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle1">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Thickness>0</Thickness>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse2">
+											<EasingDoubleKeyFrame KeyTime="0" Value="16"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse">
+											<EasingDoubleKeyFrame KeyTime="0" Value="18"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse1">
+											<EasingDoubleKeyFrame KeyTime="0" Value="18"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellipse2">
+											<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellipse">
+											<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellipse1">
+											<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Unchecked"/>
+								<VisualState x:Name="Indeterminate">
+
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse2">
+											<EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse">
+											<EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse1">
+											<EasingDoubleKeyFrame KeyTime="0" Value="8"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Unfocused"/>
+								<VisualState x:Name="PointerFocused"/>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Width="35" VerticalAlignment="Center" Height="16" Margin="0,2,0,-1" RadiusY="8" RadiusX="8" Fill="White" RenderTransformOrigin="0.5,0.5"/>
+						<Rectangle x:Name="rectangle" HorizontalAlignment="Left" Width="35" VerticalAlignment="Center" Height="18" Margin="0" RadiusY="8" RadiusX="8">
+							<Rectangle.Stroke>
+								<SolidColorBrush Color="{StaticResource CheckBox_stroke_color}"/>
+							</Rectangle.Stroke>
+							<Rectangle.Fill>
+								<SolidColorBrush Color="{StaticResource CheckBox_main_color}"/>
+							</Rectangle.Fill>
+						</Rectangle>
+						<Ellipse x:Name="ellipse2" HorizontalAlignment="Left" Height="18" Margin="1,0,0,0" VerticalAlignment="Center" Width="18" Fill="#0E000000" RenderTransformOrigin="0.5,0.5">
+							<Ellipse.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Ellipse.RenderTransform>
+						</Ellipse>
+						<Ellipse x:Name="ellipse" HorizontalAlignment="Left" Height="18" Margin="0" VerticalAlignment="Center" Width="18" RenderTransformOrigin="0.5,0.5">
+							<Ellipse.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Ellipse.RenderTransform>
+							<Ellipse.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource CheckBox_fill_bottom}" Offset="1"/>
+									<GradientStop Color="{StaticResource CheckBox_fill_top}"/>
+								</LinearGradientBrush>
+							</Ellipse.Fill>
+							<Ellipse.Stroke>
+								<SolidColorBrush Color="{StaticResource CheckBox_stroke_color}"/>
+							</Ellipse.Stroke>
+						</Ellipse>
+						<Ellipse x:Name="ellipse1" HorizontalAlignment="Left" Height="16" Margin="1,0,0,0" VerticalAlignment="Center" Width="16" RenderTransformOrigin="0.5,0.5">
+							<Ellipse.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Ellipse.RenderTransform>
+							<Ellipse.Stroke>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="White"/>
+									<GradientStop Color="Transparent" Offset="0.5"/>
+									<GradientStop Color="White" Offset="0.163"/>
+								</LinearGradientBrush>
+							</Ellipse.Stroke>
+						</Ellipse>
+						<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="7,1,0,-1" TextWrapping="Wrap" Text="{TemplateBinding Content}" VerticalAlignment="Center" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" Foreground="{TemplateBinding Background}"/>
+						<TextBlock x:Name="textBlock" Grid.Column="1" Margin="7,0,0,0" TextWrapping="Wrap" Text="{TemplateBinding Content}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" Foreground="{TemplateBinding Foreground}" ToolTipService.ToolTip="{TemplateBinding ToolTipService.ToolTip}" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsEnabled" Value="false">
+            <Setter Property="Foreground" Value="#80000000"/>
+          </Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+
+
+	<Style TargetType="{x:Type ProgressBar}">
+		<Setter Property="Height" Value="20" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ProgressBar}">
+					<Grid>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0:0:0.2">
+										<VisualTransition.GeneratedEasingFunction>
+											<ElasticEase/>
+										</VisualTransition.GeneratedEasingFunction>
+									</VisualTransition>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Determinate"/>
+								<VisualState x:Name="Updating"/>
+								<VisualState x:Name="Indeterminate">
+									<Storyboard RepeatBehavior="Forever">
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DeterminateRoot">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="border">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+											<DiscreteObjectKeyFrame KeyTime="0:0:1">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
+											<EasingDoubleKeyFrame KeyTime="0" Value="-25"/>
+											<EasingDoubleKeyFrame KeyTime="0:0:1" Value="25"/>
+											<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-25"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Error"/>
+								<VisualState x:Name="Paused"/>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<Rectangle RadiusY="8.5" RadiusX="8.5" Margin="0,1" Fill="White"/>
+						<Rectangle RadiusY="8.5" RadiusX="8.5" Margin="0,0,0,1">
+							<Rectangle.Stroke>
+								<SolidColorBrush Color="{StaticResource CheckBox_stroke_color}"/>
+							</Rectangle.Stroke>
+							<Rectangle.Fill>
+								<SolidColorBrush Color="{StaticResource CheckBox_main_color}"/>
+							</Rectangle.Fill>
+						</Rectangle>
+						<Path Data="M7.5,22.5312 L86.125,22.5312" Height="1" Margin="5,1,5,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Top" Stroke="#0F000000"/>
+						<Path Data="M7.5,22.5312 L86.125,22.5312" Height="1" Margin="7,1,7,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Bottom" Stroke="White"/>
+						
+						<Border x:Name="DeterminateRoot" BorderThickness="{TemplateBinding BorderThickness}" Margin="0,0,0,1">
+							<Grid x:Name="PART_Track" HorizontalAlignment="Stretch" Margin="0.2,-0.8,-0.2,-0.4">
+								<Rectangle x:Name="PART_Indicator" RadiusY="8.5" RadiusX="8.5" Fill="#1F000000" Margin="0,0,0,-1" HorizontalAlignment="Left"  />
+								<Rectangle RadiusY="8.5" RadiusX="8.5" Width="{Binding ActualWidth, ElementName=PART_Indicator}" HorizontalAlignment="Left"  >
+									<Rectangle.Stroke>
+										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+											<GradientStop Color="{StaticResource Stroke_active_top}"/>
+											<GradientStop Color="{StaticResource Stroke_active_bottom}" Offset="1"/>
+										</LinearGradientBrush>
+									</Rectangle.Stroke>
+									<Rectangle.Fill>
+										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+											<GradientStop Color="{StaticResource Fill_active_bottom}" Offset="1"/>
+											<GradientStop Color="{StaticResource Fill_active_top}"/>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<Rectangle RadiusY="8.5" RadiusX="8.5" Width="{Binding ActualWidth, ElementName=PART_Indicator}" HorizontalAlignment="Left" Fill="{x:Null}" Margin="0,1,0,0"  >
+									<Rectangle.Stroke>
+										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+											<GradientStop Color="#93FFFFFF" Offset="0.009"/>
+											<GradientStop Color="#009EC7E6" Offset="0.119"/>
+										</LinearGradientBrush>
+									</Rectangle.Stroke>
+								</Rectangle>
+								<Path  Width="{Binding ActualWidth, ElementName=PART_Indicator}" x:Name="path" Data="M7.5,22.5312 L86.125,22.5312" Height="1" Margin="0,1,0,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+
+									<Path.Stroke>
+										<SolidColorBrush Color="{StaticResource Stroke_active_light}"/>
+									</Path.Stroke>
+								</Path>
+							</Grid>
+						</Border>
+						<Border x:Name="border" Margin="25,0" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+							<Grid x:Name="grid" Margin="0" RenderTransformOrigin="0.5,0.5">
+								<Grid.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform/>
+										<SkewTransform/>
+										<RotateTransform/>
+										<TranslateTransform/>
+									</TransformGroup>
+								</Grid.RenderTransform>
+								<Rectangle RadiusY="8.5" RadiusX="8.5" Fill="#4C000000" Margin="0,0,0,0.5"/>
+								<Rectangle RadiusY="8.5" RadiusX="8.5" Margin="0,0,0,1" >
+									<Rectangle.Stroke>
+										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+											<GradientStop Color="{StaticResource BorderStroke_top}"/>
+											<GradientStop Color="{StaticResource BorderStroke_bottom}" Offset="1"/>
+										</LinearGradientBrush>
+									</Rectangle.Stroke>
+									<Rectangle.Fill>
+										<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+											<GradientStop Color="{StaticResource CheckBox_fill_bottom}" Offset="1"/>
+											<GradientStop Color="{StaticResource CheckBox_fill_top}"/>
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+								<Path x:Name="path1" Data="M7.5,22.5312 L86.125,22.5312" Height="1" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Top" Stroke="White" Margin="6,1,6,0"/>
+							</Grid>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+	<Style TargetType="{x:Type CheckBox}">
+		<Setter Property="Foreground" Value="#FF313131" />
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type CheckBox}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="23"/>
+							<ColumnDefinition Width="23*"/>
+						</Grid.ColumnDefinitions>
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup x:Name="CommonStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0:0:0.2"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="PointerOver"/>
+								<VisualState x:Name="Pressed"/>
+								<VisualState x:Name="Disabled">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle1">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="CheckedPointerOver"/>
+								<VisualState x:Name="CheckedPressed"/>
+								<VisualState x:Name="CheckedDisabled"/>
+								<VisualState x:Name="Indeterminate2"/>
+								<VisualState x:Name="IndeterminatePointerOver"/>
+								<VisualState x:Name="IndeterminatePressed"/>
+								<VisualState x:Name="IndeterminateDisabled"/>
+								<VisualState x:Name="Normal"/>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="CheckStates">
+								<VisualStateGroup.Transitions>
+									<VisualTransition GeneratedDuration="0"/>
+								</VisualStateGroup.Transitions>
+								<VisualState x:Name="Checked">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="rectangle">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid_Copy">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Rectangle.RadiusX)" Storyboard.TargetName="rectangle">
+											<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Rectangle.RadiusY)" Storyboard.TargetName="rectangle">
+											<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+								<VisualState x:Name="Unchecked"/>
+								<VisualState x:Name="Indeterminate">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="path1">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</VisualState>
+							</VisualStateGroup>
+							<VisualStateGroup x:Name="FocusStates">
+								<VisualState x:Name="Unfocused"/>
+								<VisualState x:Name="PointerFocused"/>
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+						<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="7,1.5,0,-1.5" TextWrapping="Wrap" Text="{TemplateBinding Content}" VerticalAlignment="Center" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" Foreground="{TemplateBinding Background}"/>
+						<TextBlock Grid.Column="1" Margin="7,0,0,0" TextWrapping="Wrap" Text="{TemplateBinding Content}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" Foreground="{TemplateBinding Foreground}" ToolTipService.ToolTip="{TemplateBinding ToolTipService.ToolTip}" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+						<Rectangle HorizontalAlignment="Center" Height="18" Margin="0,1,0,-1" RadiusY="2.375" RadiusX="2.375" VerticalAlignment="Center" Width="18" Fill="White"/>
+						<Rectangle HorizontalAlignment="Center" Height="18" Margin="0" RadiusY="1" RadiusX="1" VerticalAlignment="Center" Width="18">
+							<Rectangle.Stroke>
+								<SolidColorBrush Color="{StaticResource CheckBox_stroke_color}"/>
+							</Rectangle.Stroke>
+							<Rectangle.Fill>
+								<SolidColorBrush Color="{StaticResource CheckBox_main_color}"/>
+							</Rectangle.Fill>
+						</Rectangle>
+						<Path x:Name="path1" Data="M14.375,20 L23.375,20" HorizontalAlignment="Left" Height="2" Margin="13.375,19,0,0" Stretch="Fill" StrokeThickness="2" UseLayoutRounding="False" VerticalAlignment="Top" Width="11" Visibility="Collapsed">
+							<Path.Stroke>
+								<SolidColorBrush Color="{StaticResource Fill_pressed_light}"/>
+							</Path.Stroke>
+						</Path>
+						<Rectangle x:Name="rectangle" HorizontalAlignment="Center" Height="18" Margin="0" RadiusY="2.375" RadiusX="2.375" VerticalAlignment="Center" Width="18" Visibility="Collapsed">
+							<Rectangle.Stroke>
+								<SolidColorBrush Color="{StaticResource CheckBox_stroke_color}"/>
+							</Rectangle.Stroke>
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="{StaticResource CheckBox_fill_top}"/>
+									<GradientStop Color="{StaticResource CheckBox_fill_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<Path x:Name="path" Data="M11.375,5.5 L27,5.5" HorizontalAlignment="Center" Height="1" Margin="0,-7,0,7" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="14" Visibility="Collapsed" Stroke="White"/>
+						<Grid x:Name="grid_Copy" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,2,0,0" Visibility="Collapsed">
+							<Path Data="M14.375,20.375 L18.7083,24.7083" HorizontalAlignment="Center" Height="6" Margin="-5,4,0,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="7" StrokeThickness="2" RenderTransformOrigin="0.5,0.5" Stroke="White"/>
+							<Path Data="M18.541,25.541 L25.5,18" HorizontalAlignment="Center" Height="10" Margin="5,0,0,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="9" StrokeThickness="1.5" Stroke="White"/>
+						</Grid>
+						<Grid x:Name="grid" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,1,0,0" Visibility="Collapsed">
+							<Path Data="M14.375,20.375 L18.7083,24.7083" HorizontalAlignment="Center" Height="6" Margin="-5,4,0,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="7" StrokeThickness="2" RenderTransformOrigin="0.5,0.5">
+								<Path.Stroke>
+									<SolidColorBrush Color="{StaticResource Fill_pressed_light}"/>
+								</Path.Stroke>
+							</Path>
+							<Path Data="M18.541,25.541 L25.5,18" HorizontalAlignment="Center" Height="10" Margin="5,0,0,0" Stretch="Fill" UseLayoutRounding="False" VerticalAlignment="Center" Width="9" StrokeThickness="1.5">
+								<Path.Stroke>
+									<SolidColorBrush Color="{StaticResource Fill_pressed_light}"/>
+								</Path.Stroke>
+							</Path>
+						</Grid>
+						<Rectangle x:Name="rectangle1" HorizontalAlignment="Center" Height="18" Margin="0" RadiusY="2.375" RadiusX="2.375" VerticalAlignment="Center" Width="18" Visibility="Collapsed" Fill="#35000000"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsEnabled" Value="false">
+            <Setter Property="Foreground" Value="#80000000"/>
+          </Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<SolidColorBrush x:Key="WindowBackgroundBrush" Color="Transparent" />
+
+<SolidColorBrush x:Key="MainColor" Color="DeepSkyBlue"/>
+<SolidColorBrush x:Key="MainColorLight" Color="LightSkyBlue"/>
+<SolidColorBrush x:Key="MainColorDark" Color="#00A7DF"/>
+
+<SolidColorBrush x:Key="BorderMainBrush" Color="LightGray"/>
+<SolidColorBrush x:Key="BorderDarkMainBrush" Color="#C0C0C0"/>
+
+<SolidColorBrush x:Key="BackgroundGrayDark" Color="#FFEFEFEF"/>
+<SolidColorBrush x:Key="BackgroundGrayLight" Color="#F5F5F5"/>
+
+<SolidColorBrush x:Key="ForegroundDisabledBrush" Color="DimGray"/>
+<SolidColorBrush x:Key="ForegroundBrush" Color="Black"/>
+
+
+<LinearGradientBrush x:Key="FormBackgroundBrush"
+                             EndPoint="0.5,1" StartPoint="0.5,0">
+    <GradientStop Color="#FFFFFD" Offset="0.31" />
+    <GradientStop Color="#FFF8F8F8" Offset="1" />
+</LinearGradientBrush>
+
+
+<ControlTemplate x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="20" />
+		</Grid.ColumnDefinitions>
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="CommonStates">
+				<VisualState x:Name="Normal">
+					<Storyboard>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+							<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="MouseOver">
+				</VisualState>
+				<VisualState x:Name="Pressed">
+					<Storyboard>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_dark}"/>
+						</ColorAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+							<EasingDoubleKeyFrame KeyTime="0" Value="0.316"/>
+						</DoubleAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_light}"/>
+						</ColorAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Disabled">
+					<Storyboard>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Arrow">
+							<EasingColorKeyFrame KeyTime="0" Value="#FFC5C5C5"/>
+						</ColorAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+							<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+						</DoubleAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource CheckBox_fill_top}"/>
+						</ColorAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource CheckBox_fill_bottom}"/>
+						</ColorAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+			<VisualStateGroup x:Name="CheckStates">
+				<VisualState x:Name="Checked">
+					<Storyboard>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_dark}"/>
+						</ColorAnimationUsingKeyFrames>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+							<EasingDoubleKeyFrame KeyTime="0" Value="0.435"/>
+						</DoubleAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_light}"/>
+						</ColorAnimationUsingKeyFrames>
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Arrow">
+							<EasingColorKeyFrame KeyTime="0" Value="#FFCBCBCB"/>
+						</ColorAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Unchecked"/>
+				<VisualState x:Name="Indeterminate"/>
+			</VisualStateGroup>
+			<VisualStateGroup x:Name="FocusStates">
+				<VisualState x:Name="Unfocused"/>
+				<VisualState x:Name="Focused"/>
+			</VisualStateGroup>
+			<VisualStateGroup x:Name="ValidationStates">
+				<VisualState x:Name="Valid"/>
+				<VisualState x:Name="InvalidFocused"/>
+				<VisualState x:Name="InvalidUnfocused"/>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Grid x:Name="Border" Grid.ColumnSpan="2"><Rectangle RadiusY="5" RadiusX="5" Fill="{StaticResource Shadow_second_color}" Margin="0,1,0,-1" d:IsHidden="True"/>
+			<Rectangle RadiusY="4" RadiusX="4" Fill="{StaticResource Shadow_first_color}" Margin="1,0"/>
+			<Rectangle x:Name="rectangle" RadiusY="2" RadiusX="2" Margin="1,0,1,1">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="{StaticResource Fill_normal_top}"/>
+						<GradientStop Color="{StaticResource Fill_normal_bottom}" Offset="1"/>
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+				<Rectangle.Stroke>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="{StaticResource BorderStroke_top}"/>
+						<GradientStop Color="{StaticResource BorderStroke_bottom}" Offset="1"/>
+					</LinearGradientBrush>
+				</Rectangle.Stroke>
+			</Rectangle>
+			<Path x:Name="path" Data="M2.75,4.66667 L121.083,4.66667" Fill="White" Margin="3,1,3,0" Stretch="Fill" Stroke="{x:Null}" UseLayoutRounding="False" Height="1" VerticalAlignment="Top"/>
+		</Grid>
+		<Border x:Name="Border2" Grid.Column="0" SnapsToDevicePixels="True" Margin="1" Background="{StaticResource WindowBackgroundBrush}" BorderBrush="{DynamicResource BorderDarkMainBrush}" BorderThickness="0,0,1,0" />
+		<Path x:Name="Arrow" Grid.Column="1" Data="M 0 0 L 4 4 L 8 0 Z" Fill="#FF838383" HorizontalAlignment="Center" VerticalAlignment="Center" />
+	</Grid>
+
+</ControlTemplate>
+
+<ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+    <Border x:Name="PART_ContentHost" Background="{TemplateBinding Background}" Focusable="False" />
+</ControlTemplate>
+
+<Style TargetType="ComboBox">
+	<Setter Property="Foreground" Value="{DynamicResource Text_dark_}" />
+    <Setter Property="Validation.ErrorTemplate" Value="{x:Null}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="OverridesDefaultStyle" Value="true" />
+    <Setter Property="IsEditable" Value="False"/>
+	<Setter Property="IsReadOnly" Value="True"/>
+    <Setter Property="SnapsToDevicePixels" Value="false" />
+    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+    <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
+    <Setter Property="Margin" Value="2" />
+	<Setter Property="Height" Value="30" />
+    <Setter Property="MinHeight" Value="20" />
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate TargetType="ComboBox">
+                <Grid>
+            		<VisualStateManager.VisualStateGroups>
+            			<VisualStateGroup x:Name="CommonStates">
+            				<VisualState x:Name="Normal"/>
+            				<VisualState x:Name="MouseOver"/>
+            				<VisualState x:Name="Disabled">
+            					<Storyboard>
+            						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="PART_EditableTextBox">
+            							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource CheckBox_stroke_color}"/>
+            						</ColorAnimationUsingKeyFrames>
+            						<BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="ToggleButton">
+            							<DiscreteBooleanKeyFrame KeyTime="0" Value="True"/>
+            						</BooleanAnimationUsingKeyFrames>
+            					</Storyboard>
+            				</VisualState>
+            			</VisualStateGroup>
+            			<VisualStateGroup x:Name="FocusStates">
+            				<VisualState x:Name="Unfocused"/>
+            				<VisualState x:Name="Focused"/>
+            				<VisualState x:Name="FocusedDropDown">
+            					<Storyboard>
+            						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="PART_EditableTextBox">
+            							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource TextBox_fill}"/>
+            						</ColorAnimationUsingKeyFrames>
+            					</Storyboard>
+            				</VisualState>
+            			</VisualStateGroup>
+            		</VisualStateManager.VisualStateGroups>
+            		<ToggleButton x:Name="ToggleButton" Grid.Column="2" ClickMode="Press" Focusable="false"
+            			IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+            			Template="{StaticResource ComboBoxToggleButton}"/>
+
+            		<ContentPresenter Margin="6,3,23,3" Content="{TemplateBinding SelectionBoxItem}"
+            			ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+            			ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+            			HorizontalAlignment="Left" IsHitTestVisible="False" x:Name="ContentSite"
+            			VerticalAlignment="Center" />
+
+            		<TextBox Style="{x:Null}" x:Name="PART_EditableTextBox" Margin="3,3,23,3" Background="Transparent"
+            			Focusable="True" HorizontalAlignment="Left" IsReadOnly="{TemplateBinding IsReadOnly}"
+            			Template="{StaticResource ComboBoxTextBox}" VerticalAlignment="Center" Visibility="Hidden" >
+            			<TextBox.Foreground>
+            				<SolidColorBrush Color="{DynamicResource Text_dark}"/>
+            			</TextBox.Foreground>
+            		</TextBox>
+
+            		<Popup AllowsTransparency="True" Focusable="False" IsOpen="{TemplateBinding IsDropDownOpen}" x:Name="Popup" Placement="Bottom" PopupAnimation="Fade">
+            			<Grid MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{TemplateBinding ActualWidth}" x:Name="DropDown" >
+            				<Border BorderThickness="0" CornerRadius="2" >
+            					<Border.Background>
+            						<SolidColorBrush Color="#0C000000"/>
+            					</Border.Background>
+            				</Border>
+							<Border x:Name="DropDownBorder" BorderBrush="{DynamicResource BorderMainBrush}" BorderThickness="1" CornerRadius="2" Margin="1" >
+            					<Border.Background>
+            						<SolidColorBrush Color="{DynamicResource TextBox_fill}"/>
+            					</Border.Background>
+            				</Border>
+            				<ScrollViewer Margin="2" SnapsToDevicePixels="True">
+            					<StackPanel KeyboardNavigation.DirectionalNavigation="Contained" IsItemsHost="True" TextBlock.Foreground="#FF717171" />
+            				</ScrollViewer>
+            			</Grid>
+            		</Popup>
+            	</Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="HasItems" Value="false">
+                        <Setter Property="MinHeight" TargetName="DropDownBorder" Value="95" />
+                    </Trigger>
+                    <Trigger Property="IsGrouping" Value="true">
+                        <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
+                    </Trigger>
+                    <Trigger Property="IsEditable" Value="true">
+                        <Setter Property="IsTabStop" Value="false" />
+                        <Setter Property="Visibility" TargetName="PART_EditableTextBox" Value="Visible" />
+                        <Setter Property="Visibility" TargetName="ContentSite" Value="Hidden" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+    <Style.Triggers>
+    </Style.Triggers>
+</Style>
+<LinearGradientBrush x:Key="HorizontalSliderThumbHoverBackgroundInverted" EndPoint="0,0" StartPoint="0,1">
+	<GradientStop Color="white" Offset="0"/>
+	<GradientStop Color="#B8E2F9" Offset="0.5"/>
+	<GradientStop Color="#B0DFF8" Offset="1"/>
+</LinearGradientBrush>
+<SolidColorBrush x:Key="HorizontalSliderThumbHoverBorder" Color="#3C7FB1"/>
+<LinearGradientBrush x:Key="HorizontalSliderThumbPressedBackgroundInverted" EndPoint="0,0" StartPoint="0,1">
+	<GradientStop Color="#B8E4FA" Offset="0.25"/>
+	<GradientStop Color="#5EB4E3" Offset="0.5"/>
+	<GradientStop Color="#4C8BB4" Offset="1"/>
+</LinearGradientBrush>
+<SolidColorBrush x:Key="HorizontalSliderThumbPressedBorder" Color="#2C628B"/>
+<Geometry x:Key="SliderThumbDisabledGeometry">M -5,-10.5 L 5,-10.5 L 5,10.5 L -5,10.5 Z</Geometry>
+<Geometry x:Key="SliderPointedThumbDisabledGeometry">M 4.5,-8.5 L -4.5,-8.5 L -4.5,4.5 L -0.5,8.5 L 0.5,8.5 L 4.5,4.5 Z</Geometry>
+<Geometry x:Key="SliderPointedThumbOuterBorderGeometry">M 4.5,-7.5 A 1 1 0 0 0 3.5,-8.5 L -3.5,-8.5 A 1 1 0 0 0 -4.5,-7.5 L -4.5,4.5 L -0.5,8.5 L 0.5,8.5 L 4.5,4.5 Z</Geometry>
+<LinearGradientBrush x:Key="HorizontalSliderThumbNormalBackgroundInverted" EndPoint="0,0" StartPoint="0,1">
+	<GradientStop Color="White" Offset="0"/>
+	<GradientStop Color="#F0EFEF" Offset="0.4"/>
+	<GradientStop Color="#D6D5D5" Offset=".8"/>
+</LinearGradientBrush>
+<Geometry x:Key="SliderPointedThumbMiddleBorderGeometry">M 3.5,-7.5 L -3.5,-7.5 L -3.5,4.5 L 0,8 L 3.5,4.5 Z</Geometry>
+<Style x:Key="HorizontalSliderUpThumbStyle" TargetType="{x:Type Thumb}">
+	<Setter Property="Focusable" Value="false"/>
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="Height" Value="18"/>
+	<Setter Property="Width" Value="10"/>
+	<Setter Property="Foreground" Value="Gray"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Thumb}">
+				<Canvas SnapsToDevicePixels="true">
+					<Canvas.RenderTransform>
+						<TransformGroup>
+							<TransformGroup.Children>
+								<TransformCollection>
+									<RotateTransform Angle="180"/>
+									<TranslateTransform X="5" Y="9"/>
+								</TransformCollection>
+							</TransformGroup.Children>
+						</TransformGroup>
+					</Canvas.RenderTransform>
+					<Path x:Name="Background" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Fill="{StaticResource HorizontalSliderThumbNormalBackgroundInverted}"/>
+					<Path x:Name="InnerBorder" Data="{StaticResource SliderPointedThumbMiddleBorderGeometry}" Stroke="White" StrokeThickness="1"/>
+					<Path x:Name="OuterBorder" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Stroke="#FF929292" StrokeThickness="1"/>
+				</Canvas>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsMouseOver" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource HorizontalSliderThumbHoverBackgroundInverted}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="Foreground" Value="Blue">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource HorizontalSliderThumbHoverBackgroundInverted}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="IsDragging" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource HorizontalSliderThumbPressedBackgroundInverted}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbPressedBorder}"/>
+					</Trigger>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter Property="Fill" TargetName="Background" Value="#FFF4F4F4"/>
+						<Setter Property="Stroke" TargetName="InnerBorder" Value="{x:Null}"/>
+						<Setter Property="Data" TargetName="OuterBorder" Value="{StaticResource SliderThumbDisabledGeometry}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="#FFAEB1AF"/>
+						<Setter Property="Data" TargetName="OuterBorder" Value="{StaticResource SliderPointedThumbDisabledGeometry}"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<LinearGradientBrush x:Key="HorizontalSliderThumbHoverBackground" EndPoint="0,1" StartPoint="0,0">
+	<GradientStop Color="white" Offset="0"/>
+	<GradientStop Color="#B8E2F9" Offset="0.5"/>
+	<GradientStop Color="#B0DFF8" Offset="1"/>
+</LinearGradientBrush>
+<LinearGradientBrush x:Key="HorizontalSliderThumbPressedBackground" EndPoint="0,1" StartPoint="0,0">
+	<GradientStop Color="#B8E4FA" Offset="0.25"/>
+	<GradientStop Color="#5EB4E3" Offset="0.5"/>
+	<GradientStop Color="#4C8BB4" Offset="1"/>
+</LinearGradientBrush>
+<LinearGradientBrush x:Key="HorizontalSliderThumbNormalBackground" EndPoint="0,1" StartPoint="0,0">
+	<GradientStop Color="White" Offset="0"/>
+	<GradientStop Color="#F0EFEF" Offset="0.4"/>
+	<GradientStop Color="#D6D5D5" Offset=".8"/>
+</LinearGradientBrush>
+<Style x:Key="HorizontalSliderDownThumbStyle" TargetType="{x:Type Thumb}">
+	<Setter Property="Focusable" Value="false"/>
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="Height" Value="18"/>
+	<Setter Property="Width" Value="10"/>
+	<Setter Property="Foreground" Value="Gray"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Thumb}">
+				<Canvas SnapsToDevicePixels="true">
+					<Canvas.RenderTransform>
+						<TranslateTransform X="5" Y="9"/>
+					</Canvas.RenderTransform>
+					<Path x:Name="Background" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Fill="{StaticResource HorizontalSliderThumbNormalBackground}"/>
+					<Path x:Name="InnerBorder" Data="{StaticResource SliderPointedThumbMiddleBorderGeometry}" Stroke="White" StrokeThickness="1"/>
+					<Path x:Name="OuterBorder" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Stroke="#FF929292" StrokeThickness="1"/>
+				</Canvas>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsMouseOver" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource HorizontalSliderThumbHoverBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="Foreground" Value="Blue">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource HorizontalSliderThumbHoverBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="IsDragging" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource HorizontalSliderThumbPressedBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbPressedBorder}"/>
+					</Trigger>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter Property="Fill" TargetName="Background" Value="#FFF4F4F4"/>
+						<Setter Property="Stroke" TargetName="InnerBorder" Value="{x:Null}"/>
+						<Setter Property="Data" TargetName="OuterBorder" Value="{StaticResource SliderThumbDisabledGeometry}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="#FFAEB1AF"/>
+						<Setter Property="Data" TargetName="OuterBorder" Value="{StaticResource SliderPointedThumbDisabledGeometry}"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<LinearGradientBrush x:Key="HorizontalSliderTrackNormalBorder" EndPoint="0,1" StartPoint="0,0">
+	<GradientStop Color="#FFAEB1AF" Offset="0.1"/>
+	<GradientStop Color="White" Offset=".9"/>
+</LinearGradientBrush>
+<SolidColorBrush x:Key="HorizontalSliderTrackNormalBackground" Color="#FFE7EAEA"/>
+<Style x:Key="SliderRepeatButtonStyle" TargetType="{x:Type RepeatButton}">
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="IsTabStop" Value="false"/>
+	<Setter Property="Focusable" Value="false"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type RepeatButton}">
+				<Rectangle Fill="Transparent"/>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<Geometry x:Key="SliderThumbOuterBorderGeometry">M -5,-9.5 A 1 1 0 0 1 -4,-10.5 L 4,-10.5 A 1 1 0 0 1 5,-9.5 L 5,9.5 A 1 1 0 0 1 4,10.5 L -4,10.5 A 1 1 0 0 1 -5,9.5 Z</Geometry>
+<Geometry x:Key="SliderThumbMiddleBorderGeometry">M -4,-9.5 L 4,-9.5 L 4,9.5 L -4,9.5 Z</Geometry>
+<Style x:Key="HorizontalSliderThumbStyle" TargetType="{x:Type Thumb}">
+	<Setter Property="Focusable" Value="false"/>
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="Height" Value="22"/>
+	<Setter Property="Width" Value="11"/>
+	<Setter Property="Foreground" Value="Gray"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Thumb}">
+				<Grid>
+					<VisualStateManager.VisualStateGroups>
+						<VisualStateGroup x:Name="CommonStates">
+							<VisualState x:Name="Normal"/>
+							<VisualState x:Name="MouseOver"/>
+							<VisualState x:Name="Pressed">
+								<Storyboard>
+									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="Background">
+										<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_over_top}"/>
+									</ColorAnimationUsingKeyFrames>
+									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="Background">
+										<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_over_bottom}"/>
+									</ColorAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="Background">
+										<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+									</DoubleAnimationUsingKeyFrames>
+									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="Background">
+										<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+									</DoubleAnimationUsingKeyFrames>
+								</Storyboard>
+							</VisualState>
+							<VisualState x:Name="Disabled"/>
+						</VisualStateGroup>
+					</VisualStateManager.VisualStateGroups>
+					<Canvas SnapsToDevicePixels="true">
+						<Canvas.RenderTransform>
+							<TranslateTransform X="5.5" Y="11"/>
+						</Canvas.RenderTransform>
+						<Path x:Name="OuterBorder_Copy" Data="{StaticResource SliderThumbOuterBorderGeometry}" Margin="0,1,0,0" Stroke="{x:Null}" Fill="#1E000000"/>
+						<Path x:Name="Background" Data="{StaticResource SliderThumbOuterBorderGeometry}">
+							<Path.Fill>
+								<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+									<GradientStop Color="{DynamicResource CheckBox_fill_top}" Offset="0"/>
+									<GradientStop Color="{DynamicResource CheckBox_fill_bottom}" Offset="1"/>
+								</LinearGradientBrush>
+							</Path.Fill>
+						</Path>
+						<Path x:Name="OuterBorder" Data="{StaticResource SliderThumbOuterBorderGeometry}">
+							<Path.Stroke>
+								<SolidColorBrush Color="{DynamicResource CheckBox_stroke_color}"/>
+							</Path.Stroke>
+						</Path>
+
+					</Canvas>
+					<Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Margin="2,7,2,5" SnapsToDevicePixels="False">
+						<Grid.RowDefinitions>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}" Grid.Row="1"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}" Grid.Column="1"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}" Grid.Row="2"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}" Grid.Column="1" Grid.Row="1"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}" Grid.Row="3"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}" Grid.Column="1" Grid.Row="2"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_light_}" Grid.Column="1" Grid.Row="3"/>
+					</Grid>
+					<Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Margin="2,6" SnapsToDevicePixels="False">
+						<Grid.RowDefinitions>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}" Grid.Row="1"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}" Grid.Column="1"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}" Grid.Row="2"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}" Grid.Column="1" Grid.Row="1"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}" Grid.Row="3"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}" Grid.Column="1" Grid.Row="2"/>
+						<Rectangle Width="1" Height="1" Fill="{DynamicResource Text_dark_}" Grid.Column="1" Grid.Row="3"/>
+					</Grid></Grid>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<LinearGradientBrush x:Key="VerticalSliderThumbHoverBackground" EndPoint="1,0" StartPoint="0,0">
+	<GradientStop Color="white" Offset="0"/>
+	<GradientStop Color="#B8E2F9" Offset="0.5"/>
+	<GradientStop Color="#B0DFF8" Offset="1"/>
+</LinearGradientBrush>
+<LinearGradientBrush x:Key="VerticalSliderThumbPressedBackground" EndPoint="1,0" StartPoint="0,0">
+	<GradientStop Color="#B8E4FA" Offset="0.25"/>
+	<GradientStop Color="#5EB4E3" Offset="0.5"/>
+	<GradientStop Color="#4C8BB4" Offset="1"/>
+</LinearGradientBrush>
+<LinearGradientBrush x:Key="VerticalSliderThumbNormalBackground" EndPoint="1,0" StartPoint="0,0">
+	<GradientStop Color="White" Offset="0"/>
+	<GradientStop Color="#F0EFEF" Offset="0.4"/>
+	<GradientStop Color="#D6D5D5" Offset=".8"/>
+</LinearGradientBrush>
+<Style x:Key="VerticalSliderLeftThumbStyle" TargetType="{x:Type Thumb}">
+	<Setter Property="Focusable" Value="false"/>
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="Height" Value="10"/>
+	<Setter Property="Width" Value="18"/>
+	<Setter Property="Foreground" Value="Gray"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Thumb}">
+				<Canvas SnapsToDevicePixels="true">
+					<Canvas.RenderTransform>
+						<TransformGroup>
+							<TransformGroup.Children>
+								<TransformCollection>
+									<RotateTransform Angle="90"/>
+									<TranslateTransform X="9" Y="5"/>
+								</TransformCollection>
+							</TransformGroup.Children>
+						</TransformGroup>
+					</Canvas.RenderTransform>
+					<Path x:Name="Background" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Fill="{StaticResource VerticalSliderThumbNormalBackground}"/>
+					<Path x:Name="InnerBorder" Data="{StaticResource SliderPointedThumbMiddleBorderGeometry}" Stroke="White" StrokeThickness="1"/>
+					<Path x:Name="OuterBorder" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Stroke="#FF929292" StrokeThickness="1"/>
+				</Canvas>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsMouseOver" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbHoverBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="Foreground" Value="Blue">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbHoverBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="IsDragging" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbPressedBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbPressedBorder}"/>
+					</Trigger>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter Property="Fill" TargetName="Background" Value="#FFF4F4F4"/>
+						<Setter Property="Stroke" TargetName="InnerBorder" Value="{x:Null}"/>
+						<Setter Property="Data" TargetName="OuterBorder" Value="{StaticResource SliderPointedThumbDisabledGeometry}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="#FFAEB1AF"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<LinearGradientBrush x:Key="VerticalSliderThumbHoverBackgroundInverted" EndPoint="0,0" StartPoint="1,0">
+	<GradientStop Color="white" Offset="0"/>
+	<GradientStop Color="#B8E2F9" Offset="0.5"/>
+	<GradientStop Color="#B0DFF8" Offset="1"/>
+</LinearGradientBrush>
+<LinearGradientBrush x:Key="VerticalSliderThumbPressedBackgroundInverted" EndPoint="0,0" StartPoint="1,0">
+	<GradientStop Color="#B8E4FA" Offset="0.25"/>
+	<GradientStop Color="#5EB4E3" Offset="0.5"/>
+	<GradientStop Color="#4C8BB4" Offset="1"/>
+</LinearGradientBrush>
+<LinearGradientBrush x:Key="VerticalSliderThumbNormalBackgroundInverted" EndPoint="0,0" StartPoint="1,0">
+	<GradientStop Color="White" Offset="0"/>
+	<GradientStop Color="#F0EFEF" Offset="0.4"/>
+	<GradientStop Color="#D6D5D5" Offset=".8"/>
+</LinearGradientBrush>
+<Style x:Key="VerticalSliderRightThumbStyle" TargetType="{x:Type Thumb}">
+	<Setter Property="Focusable" Value="false"/>
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="Height" Value="10"/>
+	<Setter Property="Width" Value="18"/>
+	<Setter Property="Foreground" Value="Gray"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Thumb}">
+				<Canvas SnapsToDevicePixels="true">
+					<Canvas.RenderTransform>
+						<TransformGroup>
+							<TransformGroup.Children>
+								<TransformCollection>
+									<RotateTransform Angle="-90"/>
+									<TranslateTransform X="9" Y="5"/>
+								</TransformCollection>
+							</TransformGroup.Children>
+						</TransformGroup>
+					</Canvas.RenderTransform>
+					<Path x:Name="Background" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Fill="{StaticResource VerticalSliderThumbNormalBackgroundInverted}"/>
+					<Path x:Name="InnerBorder" Data="{StaticResource SliderPointedThumbMiddleBorderGeometry}" Stroke="White" StrokeThickness="1"/>
+					<Path x:Name="OuterBorder" Data="{StaticResource SliderPointedThumbOuterBorderGeometry}" Stroke="#FF929292" StrokeThickness="1"/>
+				</Canvas>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsMouseOver" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbHoverBackgroundInverted}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="Foreground" Value="Blue">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbHoverBackgroundInverted}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="IsDragging" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbPressedBackgroundInverted}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbPressedBorder}"/>
+					</Trigger>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter Property="Fill" TargetName="Background" Value="#FFF4F4F4"/>
+						<Setter Property="Stroke" TargetName="InnerBorder" Value="{x:Null}"/>
+						<Setter Property="Data" TargetName="OuterBorder" Value="{StaticResource SliderPointedThumbDisabledGeometry}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="#FFAEB1AF"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<LinearGradientBrush x:Key="VerticalSliderTrackNormalBorder" EndPoint="1,0" StartPoint="0,0">
+	<GradientStop Color="#FFAEB1AF" Offset="0.1"/>
+	<GradientStop Color="White" Offset=".9"/>
+</LinearGradientBrush>
+<Style x:Key="VerticalSliderThumbStyle" TargetType="{x:Type Thumb}">
+	<Setter Property="Focusable" Value="false"/>
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="Height" Value="11"/>
+	<Setter Property="Width" Value="22"/>
+	<Setter Property="Foreground" Value="Gray"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Thumb}">
+				<Canvas SnapsToDevicePixels="true">
+					<Canvas.RenderTransform>
+						<TransformGroup>
+							<TransformGroup.Children>
+								<TransformCollection>
+									<RotateTransform Angle="90"/>
+									<TranslateTransform X="11" Y="5.5"/>
+								</TransformCollection>
+							</TransformGroup.Children>
+						</TransformGroup>
+					</Canvas.RenderTransform>
+					<Path x:Name="Background" Data="{StaticResource SliderThumbOuterBorderGeometry}" Fill="{StaticResource VerticalSliderThumbNormalBackground}"/>
+					<Path x:Name="InnerBorder" Data="{StaticResource SliderThumbMiddleBorderGeometry}" Stroke="White" StrokeThickness="1"/>
+					<Path x:Name="OuterBorder" Data="{StaticResource SliderThumbOuterBorderGeometry}" Stroke="#FF929292" StrokeThickness="1"/>
+				</Canvas>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsMouseOver" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbHoverBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="Foreground" Value="Blue">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbHoverBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbHoverBorder}"/>
+					</Trigger>
+					<Trigger Property="IsDragging" Value="true">
+						<Setter Property="Fill" TargetName="Background" Value="{StaticResource VerticalSliderThumbPressedBackground}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="{StaticResource HorizontalSliderThumbPressedBorder}"/>
+					</Trigger>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter Property="Fill" TargetName="Background" Value="#FFF4F4F4"/>
+						<Setter Property="Stroke" TargetName="InnerBorder" Value="{x:Null}"/>
+						<Setter Property="Data" TargetName="OuterBorder" Value="{StaticResource SliderThumbDisabledGeometry}"/>
+						<Setter Property="Stroke" TargetName="OuterBorder" Value="#FFAEB1AF"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+
+<Style TargetType="{x:Type Slider}">
+	<Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+	<Setter Property="Background" Value="Transparent"/>
+	<Setter Property="Foreground" Value="#FFC4C4C4"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Slider}">
+				<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+					<VisualStateManager.VisualStateGroups>
+						<VisualStateGroup x:Name="CommonStates">
+							<VisualState x:Name="Normal"/>
+							<VisualState x:Name="MouseOver"/>
+							<VisualState x:Name="Disabled"/>
+						</VisualStateGroup>
+					</VisualStateManager.VisualStateGroups>
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<TickBar x:Name="TopTick" Fill="{TemplateBinding Foreground}" Height="4" Placement="Top" Grid.Row="0" Visibility="Collapsed"/>
+						<TickBar x:Name="BottomTick" Fill="{TemplateBinding Foreground}" Height="4" Placement="Bottom" Grid.Row="2" Visibility="Collapsed"/>
+						<Border x:Name="TrackBackground" BorderThickness="1" CornerRadius="1" Height="6" Margin="5,0" Grid.Row="1" VerticalAlignment="center">
+							<Border.BorderBrush>
+								<SolidColorBrush Color="{DynamicResource CheckBox_stroke_color}"/>
+							</Border.BorderBrush>
+							<Border.Background>
+								<SolidColorBrush Color="#FFd7d7d7"/>
+							</Border.Background>
+							<Canvas Margin="0" Height="6">
+								<Rectangle x:Name="PART_SelectionRange" Fill="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Height="Auto" Stroke="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" StrokeThickness="1.0" Visibility="Hidden"/>
+							</Canvas>
+						</Border>
+						<Track x:Name="PART_Track" Grid.Row="1">
+							<Track.DecreaseRepeatButton>
+								<RepeatButton Command="{x:Static Slider.DecreaseLarge}" Style="{StaticResource SliderRepeatButtonStyle}"/>
+							</Track.DecreaseRepeatButton>
+							<Track.IncreaseRepeatButton>
+								<RepeatButton Command="{x:Static Slider.IncreaseLarge}" Style="{StaticResource SliderRepeatButtonStyle}"/>
+							</Track.IncreaseRepeatButton>
+							<Track.Thumb>
+								<Thumb x:Name="Thumb" Style="{StaticResource HorizontalSliderThumbStyle}"/>
+							</Track.Thumb>
+						</Track>
+					</Grid>
+				</Border>
+				<ControlTemplate.Triggers>
+					<Trigger Property="TickPlacement" Value="TopLeft">
+						<Setter Property="Visibility" TargetName="TopTick" Value="Visible"/>
+						<Setter Property="Style" TargetName="Thumb" Value="{StaticResource HorizontalSliderUpThumbStyle}"/>
+						<Setter Property="Margin" TargetName="TrackBackground" Value="5,2,5,0"/>
+					</Trigger>
+					<Trigger Property="TickPlacement" Value="BottomRight">
+						<Setter Property="Visibility" TargetName="BottomTick" Value="Visible"/>
+						<Setter Property="Style" TargetName="Thumb" Value="{StaticResource HorizontalSliderDownThumbStyle}"/>
+						<Setter Property="Margin" TargetName="TrackBackground" Value="5,0,5,2"/>
+					</Trigger>
+					<Trigger Property="TickPlacement" Value="Both">
+						<Setter Property="Visibility" TargetName="TopTick" Value="Visible"/>
+						<Setter Property="Visibility" TargetName="BottomTick" Value="Visible"/>
+					</Trigger>
+					<Trigger Property="IsSelectionRangeEnabled" Value="true">
+						<Setter Property="Visibility" TargetName="PART_SelectionRange" Value="Visible"/>
+					</Trigger>
+					<Trigger Property="IsKeyboardFocused" Value="true">
+						<Setter Property="Foreground" TargetName="Thumb" Value="Blue"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+	<Style.Triggers>
+		<Trigger Property="Orientation" Value="Vertical">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Slider}">
+						<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="Auto"/>
+									<ColumnDefinition MinWidth="{TemplateBinding MinWidth}" Width="Auto"/>
+									<ColumnDefinition Width="Auto"/>
+								</Grid.ColumnDefinitions>
+								<TickBar x:Name="TopTick" Grid.Column="0" Fill="{TemplateBinding Foreground}" Placement="Left" Visibility="Collapsed" Width="4"/>
+								<TickBar x:Name="BottomTick" Grid.Column="2" Fill="{TemplateBinding Foreground}" Placement="Right" Visibility="Collapsed" Width="4"/>
+								<Border x:Name="TrackBackground" BorderBrush="{StaticResource VerticalSliderTrackNormalBorder}" BorderThickness="1" Background="{StaticResource HorizontalSliderTrackNormalBackground}" Grid.Column="1" CornerRadius="1" HorizontalAlignment="center" Margin="0,5" Width="4.0">
+									<Canvas Margin="-1,-6">
+										<Rectangle x:Name="PART_SelectionRange" Fill="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Stroke="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" StrokeThickness="1.0" Visibility="Hidden" Width="4.0"/>
+									</Canvas>
+								</Border>
+								<Track x:Name="PART_Track" Grid.Column="1">
+									<Track.DecreaseRepeatButton>
+										<RepeatButton Command="{x:Static Slider.DecreaseLarge}" Style="{StaticResource SliderRepeatButtonStyle}"/>
+									</Track.DecreaseRepeatButton>
+									<Track.IncreaseRepeatButton>
+										<RepeatButton Command="{x:Static Slider.IncreaseLarge}" Style="{StaticResource SliderRepeatButtonStyle}"/>
+									</Track.IncreaseRepeatButton>
+									<Track.Thumb>
+										<Thumb x:Name="Thumb" Style="{StaticResource VerticalSliderThumbStyle}"/>
+									</Track.Thumb>
+								</Track>
+							</Grid>
+						</Border>
+						<ControlTemplate.Triggers>
+							<Trigger Property="TickPlacement" Value="TopLeft">
+								<Setter Property="Visibility" TargetName="TopTick" Value="Visible"/>
+								<Setter Property="Style" TargetName="Thumb" Value="{StaticResource VerticalSliderLeftThumbStyle}"/>
+								<Setter Property="Margin" TargetName="TrackBackground" Value="2,5,0,5"/>
+							</Trigger>
+							<Trigger Property="TickPlacement" Value="BottomRight">
+								<Setter Property="Visibility" TargetName="BottomTick" Value="Visible"/>
+								<Setter Property="Style" TargetName="Thumb" Value="{StaticResource VerticalSliderRightThumbStyle}"/>
+								<Setter Property="Margin" TargetName="TrackBackground" Value="0,5,2,5"/>
+							</Trigger>
+							<Trigger Property="TickPlacement" Value="Both">
+								<Setter Property="Visibility" TargetName="TopTick" Value="Visible"/>
+								<Setter Property="Visibility" TargetName="BottomTick" Value="Visible"/>
+							</Trigger>
+							<Trigger Property="IsSelectionRangeEnabled" Value="true">
+								<Setter Property="Visibility" TargetName="PART_SelectionRange" Value="Visible"/>
+							</Trigger>
+							<Trigger Property="IsKeyboardFocused" Value="true">
+								<Setter Property="Foreground" TargetName="Thumb" Value="Blue"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Trigger>
+	</Style.Triggers>
+</Style>
+<SolidColorBrush x:Key="CheckBoxStroke" Color="#8E8F8F"/>
+
+
+
+
+<Style x:Key="CheckRadioFocusVisual">
+	<Setter Property="Control.Template">
+		<Setter.Value>
+			<ControlTemplate>
+				<Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+
+<Style TargetType="{x:Type RadioButton}">
+	<Setter Property="Foreground" Value="#FF313131" />
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+  <Setter Property="OverridesDefaultStyle" Value="true"/>
+  <Setter Property="Template">
+    <Setter.Value>
+      <ControlTemplate TargetType="{x:Type RadioButton}">
+        <BulletDecorator Background="Transparent">
+          <BulletDecorator.Bullet>
+            <Grid Width="13" 
+              Height="13" >
+              <Ellipse x:Name="Border" 
+                StrokeThickness="1"  >
+              	<Ellipse.Stroke>
+              		<SolidColorBrush Color="{DynamicResource CheckBox_stroke_color}"/>
+              	</Ellipse.Stroke>
+              	<Ellipse.Fill>
+              		<SolidColorBrush Color="{DynamicResource CheckBox_main_color}"/>
+              	</Ellipse.Fill>
+              </Ellipse>
+              <Ellipse x:Name="CheckMark"
+                Margin="4"
+                Fill="{DynamicResource Fill_pressed_dark_}" />
+            </Grid>
+          </BulletDecorator.Bullet>
+          <ContentPresenter 
+            Margin="4,0,0,0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            RecognizesAccessKey="True"/>
+        </BulletDecorator>
+        <ControlTemplate.Triggers>
+          <Trigger Property="IsChecked" Value="false">
+            <Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>
+			
+          </Trigger>
+		  <Trigger Property="IsChecked" Value="true">
+		  <Setter TargetName="Border" Property="Fill" Value="{DynamicResource CheckBox_fill_bottom_}"  />
+		  </Trigger>
+          <Trigger Property="IsMouseOver" Value="true">
+            <Setter TargetName="Border" Property="Fill" Value="#EEE" />
+          </Trigger>
+          <Trigger Property="IsPressed" Value="true">
+            <Setter TargetName="Border" Property="Fill" Value="{DynamicResource Fill_pressed_dark_}"  />
+			<Setter TargetName="Border" Property="Stroke" Value="{DynamicResource Fill_pressed_light_}"  />
+          </Trigger>
+          <Trigger Property="IsEnabled" Value="false">
+            <Setter TargetName="Border" Property="Fill" Value="{DynamicResource CheckBox_fill_bottom_}"  />
+            <Setter TargetName="Border" Property="Stroke" Value="{DynamicResource CheckBox_stroke_color_}" />
+            <Setter Property="Foreground" Value="#80000000"/>
+          </Trigger>
+        </ControlTemplate.Triggers>
+      </ControlTemplate>
+    </Setter.Value>
+  </Setter>
+</Style>
+
+
+
+<SolidColorBrush x:Key="ListBorder" Color="#828790"/>
+
+<Style TargetType="{x:Type ListBox}">
+	<Setter Property="Background" Value="{DynamicResource TextBox_fill_}"/>
+	<Setter Property="BorderBrush" Value="{StaticResource CheckBox_stroke_color_}"/>
+	<Setter Property="BorderThickness" Value="1"/>
+	<Setter Property="Foreground" Value="{DynamicResource Text_dark_}"/>
+	<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+	<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+	<Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+	<Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+	<Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+	<Setter Property="VerticalContentAlignment" Value="Center"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type ListBox}">
+				<Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="true" CornerRadius="1">
+					<ScrollViewer Focusable="false" Padding="{TemplateBinding Padding}">
+						<ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+					</ScrollViewer>
+				</Border>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+					</Trigger>
+					<Trigger Property="IsGrouping" Value="true">
+						<Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<Style x:Key="RadioButtonLarge" TargetType="{x:Type RadioButton}">
+	<Setter Property="Foreground" Value="#FF313131" />
+	<Setter Property="OverridesDefaultStyle" Value="true"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type RadioButton}">
+				<BulletDecorator Background="Transparent">
+					<BulletDecorator.Bullet>
+						<Grid Width="23" 
+							Height="23" >
+							<Ellipse x:Name="Border" 
+								StrokeThickness="1"  >
+								<Ellipse.Stroke>
+									<SolidColorBrush Color="{DynamicResource CheckBox_stroke_color}"/>
+								</Ellipse.Stroke>
+								<Ellipse.Fill>
+									<SolidColorBrush Color="{DynamicResource CheckBox_main_color}"/>
+								</Ellipse.Fill>
+							</Ellipse>
+							<Ellipse x:Name="CheckMark"
+								Margin="6"
+								Fill="{DynamicResource Fill_pressed_dark_}" />
+						</Grid>
+					</BulletDecorator.Bullet>
+					<ContentPresenter 
+						Margin="6,0,0,0"
+						VerticalAlignment="Center"
+						HorizontalAlignment="Left"
+						RecognizesAccessKey="True"/>
+				</BulletDecorator>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsChecked" Value="false">
+						<Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>
+			
+					</Trigger>
+					<Trigger Property="IsChecked" Value="true">
+						<Setter TargetName="Border" Property="Fill" Value="{DynamicResource CheckBox_fill_bottom_}"  />
+					</Trigger>
+					<Trigger Property="IsMouseOver" Value="true">
+						<Setter TargetName="Border" Property="Fill" Value="#EEE" />
+					</Trigger>
+					<Trigger Property="IsPressed" Value="true">
+						<Setter TargetName="Border" Property="Fill" Value="{DynamicResource Fill_pressed_dark_}"  />
+						<Setter TargetName="Border" Property="Stroke" Value="{DynamicResource Fill_pressed_light_}"  />
+					</Trigger>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter TargetName="Border" Property="Fill" Value="#000"  />
+						<Setter TargetName="Border" Property="Stroke" Value="#40000000" />
+						<Setter Property="Foreground" Value="#80000000"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+<LinearGradientBrush x:Key="TextBoxBorder" EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+	<GradientStop Color="#ABADB3" Offset="0.05"/>
+	<GradientStop Color="#E2E3EA" Offset="0.07"/>
+	<GradientStop Color="#E3E9EF" Offset="1"/>
+</LinearGradientBrush>
+<Style TargetType="{x:Type TextBox}">
+	<Setter Property="Foreground" Value="{DynamicResource Text_dark_}"/>
+	<Setter Property="Background" Value="#55FFFFFF"/>
+	<Setter Property="BorderBrush" Value="{StaticResource TextBoxBorder}"/>
+	<Setter Property="BorderThickness" Value="0"/>
+	<Setter Property="Padding" Value="1"/>
+	<Setter Property="AllowDrop" Value="true"/>
+	<Setter Property="Height" Value="30"/>
+	<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+	<Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+	<Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type TextBox}"><Grid>
+					<VisualStateManager.VisualStateGroups>
+						<VisualStateGroup x:Name="CommonStates">
+							<VisualState x:Name="Normal"/>
+							<VisualState x:Name="Disabled"/>
+							<VisualState x:Name="ReadOnly"/>
+							<VisualState x:Name="MouseOver"/>
+						</VisualStateGroup>
+					</VisualStateManager.VisualStateGroups>
+					<Rectangle x:Name="rectangle1" Margin="0,1,0,-1" RadiusY="3" RadiusX="3" Fill="{TemplateBinding Background}"/>
+					<Rectangle x:Name="rectangle" Margin="0" RadiusY="3" RadiusX="3">
+						<Rectangle.Fill>
+							<SolidColorBrush Color="{StaticResource TextBox_fill}"/>
+						</Rectangle.Fill>
+						<Rectangle.Stroke>
+							<SolidColorBrush Color="{StaticResource CheckBox_stroke_color}"/>
+						</Rectangle.Stroke>
+					</Rectangle>
+					<Grid VerticalAlignment="Center" Margin="{TemplateBinding Padding}">
+						<ScrollViewer x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" VerticalContentAlignment="Center" VerticalScrollBarVisibility="Hidden" Margin="{TemplateBinding Padding}" PanningMode="VerticalFirst" Grid.IsSharedSizeScope="True" CanContentScroll="True">
+							<ScrollViewer.Foreground>
+								<SolidColorBrush Color="{DynamicResource Text_dark}"/>
+							</ScrollViewer.Foreground>
+						</ScrollViewer>
+					</Grid></Grid>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsEnabled" Value="false">
+						<Setter Property="Fill" TargetName="rectangle" Value="{DynamicResource CheckBox_fill_bottom_}"/>
+						<Setter Property="Background" TargetName="PART_ContentHost" Value="#00000000"/>
+						<Setter Property="Foreground" Value="#80000000"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter>
+</Style>
+
+</ResourceDictionary>
