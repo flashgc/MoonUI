@@ -36,9 +36,7 @@ this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Ur
 Notes
 ==========
 
-There are some problems in wpf designer (VS2010) using first way, but it compiles without any problems. You can try to work in VS2012 or to use 2nd/3rd method.
-
-Also there is a lot of crap code because of using only Blend to create it, but style is already usable. Later it shall be refactored.
+There is a lot of crap code because of using only Blend to create it, but style is already usable. Later it shall be refactored.
 
 
 ----
