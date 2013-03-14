@@ -61,40 +61,40 @@
 								</VisualStateGroup.Transitions>
 								<VisualState x:Name="Pressed">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 										<DoubleAnimation Duration="0" To="0.239" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
 											<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}"/>
 										</ObjectAnimationUsingKeyFrames>
-										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
 										
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Disabled">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="PointerOver">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_over_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_over_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_top}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_bottom}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Normal">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="MouseOver">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_over_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_over_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_top}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_over_bottom}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 							</VisualStateGroup>
@@ -144,24 +144,24 @@
 								</VisualStateGroup.Transitions>
 								<VisualState x:Name="Pressed">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
 											<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}"/>
 										</ObjectAnimationUsingKeyFrames>
-										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Disabled">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
 											<DiscreteObjectKeyFrame KeyTime="0">
 												<DiscreteObjectKeyFrame.Value>
@@ -172,19 +172,17 @@
 												</DiscreteObjectKeyFrame.Value>
 											</DiscreteObjectKeyFrame>
 										</ObjectAnimationUsingKeyFrames>
-										<ColorAnimation Duration="0" To="{StaticResource BorderStroke_top}" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FF566671" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="MouseOver">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="#FF85A420" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FFB6D846" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF85A420" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FFB6D846" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Normal">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="#FFB6D846" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FFB6D846" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 							</VisualStateGroup>
@@ -233,21 +231,21 @@
 								</VisualStateGroup.Transitions>
 								<VisualState x:Name="Pressed">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Disabled">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
 											<DiscreteObjectKeyFrame KeyTime="0">
 												<DiscreteObjectKeyFrame.Value>
@@ -258,22 +256,20 @@
 												</DiscreteObjectKeyFrame.Value>
 											</DiscreteObjectKeyFrame>
 										</ObjectAnimationUsingKeyFrames>
-										<ColorAnimation Duration="0" To="{StaticResource BorderStroke_top}" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FF566671" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="MouseOver">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_active_bottom_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_active_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_bottom_dark}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Normal">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_active_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_active_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#3B000000" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_active_bottom}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#3B000000" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 							</VisualStateGroup>
@@ -326,25 +322,25 @@
 								</VisualStateGroup.Transitions>
 								<VisualState x:Name="Pressed">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_light}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_pressed_dark}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 										<DoubleAnimation Duration="0" To="0.239" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
 											<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Null}"/>
 										</ObjectAnimationUsingKeyFrames>
-										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="White" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#FF414141" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Disabled">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).(SolidColorBrush.Color)" Storyboard.TargetName="path" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_normal_bottom}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Fill).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="Transparent" Storyboard.TargetProperty="(Shape.Stroke).Color" Storyboard.TargetName="path" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#5B717171" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="#AFFFFFFF" Storyboard.TargetProperty="(TextBlock.Foreground).Color" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
 										<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke)" Storyboard.TargetName="rectangle">
 											<DiscreteObjectKeyFrame KeyTime="0">
 												<DiscreteObjectKeyFrame.Value>
@@ -355,20 +351,18 @@
 												</DiscreteObjectKeyFrame.Value>
 											</DiscreteObjectKeyFrame>
 										</ObjectAnimationUsingKeyFrames>
-										<ColorAnimation Duration="0" To="{StaticResource BorderStroke_top}" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="#FF566671" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="MouseOver">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_over_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_over_bottom}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 								<VisualState x:Name="Normal">
 									<Storyboard>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_top}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
-										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_bottom}" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_top}" Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
+										<ColorAnimation Duration="0" To="{StaticResource Fill_orange_normal_bottom}" Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle" d:IsOptimized="True"/>
 									</Storyboard>
 								</VisualState>
 							</VisualStateGroup>
@@ -631,7 +625,7 @@
 												</DiscreteObjectKeyFrame.Value>
 											</DiscreteObjectKeyFrame>
 										</ObjectAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="grid">
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="RenderTransform.Children[3].X" Storyboard.TargetName="grid">
 											<EasingDoubleKeyFrame KeyTime="0" Value="-25"/>
 											<EasingDoubleKeyFrame KeyTime="0:0:1" Value="25"/>
 											<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-25"/>
@@ -916,29 +910,29 @@
 				</VisualState>
 				<VisualState x:Name="Pressed">
 					<Storyboard>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle">
 							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_dark}"/>
 						</ColorAnimationUsingKeyFrames>
 						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
 							<EasingDoubleKeyFrame KeyTime="0" Value="0.316"/>
 						</DoubleAnimationUsingKeyFrames>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle">
 							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_light}"/>
 						</ColorAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
 				<VisualState x:Name="Disabled">
 					<Storyboard>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Arrow">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).Color" Storyboard.TargetName="Arrow">
 							<EasingColorKeyFrame KeyTime="0" Value="#FFC5C5C5"/>
 						</ColorAnimationUsingKeyFrames>
 						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
 							<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
 						</DoubleAnimationUsingKeyFrames>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle">
 							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource CheckBox_fill_top}"/>
 						</ColorAnimationUsingKeyFrames>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle">
 							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource CheckBox_fill_bottom}"/>
 						</ColorAnimationUsingKeyFrames>
 					</Storyboard>
@@ -947,16 +941,16 @@
 			<VisualStateGroup x:Name="CheckStates">
 				<VisualState x:Name="Checked">
 					<Storyboard>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="rectangle">
 							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_dark}"/>
 						</ColorAnimationUsingKeyFrames>
 						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
 							<EasingDoubleKeyFrame KeyTime="0" Value="0.435"/>
 						</DoubleAnimationUsingKeyFrames>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="rectangle">
 							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_pressed_light}"/>
 						</ColorAnimationUsingKeyFrames>
-						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="Arrow">
+						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).Color" Storyboard.TargetName="Arrow">
 							<EasingColorKeyFrame KeyTime="0" Value="#FFCBCBCB"/>
 						</ColorAnimationUsingKeyFrames>
 					</Storyboard>
@@ -1026,7 +1020,7 @@
             				<VisualState x:Name="MouseOver"/>
             				<VisualState x:Name="Disabled">
             					<Storyboard>
-            						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="PART_EditableTextBox">
+            						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).Color" Storyboard.TargetName="PART_EditableTextBox">
             							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource CheckBox_stroke_color}"/>
             						</ColorAnimationUsingKeyFrames>
             						<BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsEnabled)" Storyboard.TargetName="ToggleButton">
@@ -1040,7 +1034,7 @@
             				<VisualState x:Name="Focused"/>
             				<VisualState x:Name="FocusedDropDown">
             					<Storyboard>
-            						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="PART_EditableTextBox">
+            						<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).Color" Storyboard.TargetName="PART_EditableTextBox">
             							<EasingColorKeyFrame KeyTime="0" Value="{StaticResource TextBox_fill}"/>
             						</ColorAnimationUsingKeyFrames>
             					</Storyboard>
@@ -1264,10 +1258,10 @@
 							<VisualState x:Name="MouseOver"/>
 							<VisualState x:Name="Pressed">
 								<Storyboard>
-									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="Background">
+									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[0].Color" Storyboard.TargetName="Background">
 										<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_over_top}"/>
 									</ColorAnimationUsingKeyFrames>
-									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="Background">
+									<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="Fill.GradientStops[1].Color" Storyboard.TargetName="Background">
 										<EasingColorKeyFrame KeyTime="0" Value="{StaticResource Fill_over_bottom}"/>
 									</ColorAnimationUsingKeyFrames>
 									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="Background">
@@ -1818,11 +1812,14 @@
 		</Setter.Value>
 	</Setter>
 </Style>
+    
 <LinearGradientBrush x:Key="TextBoxBorder" EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
 	<GradientStop Color="#ABADB3" Offset="0.05"/>
 	<GradientStop Color="#E2E3EA" Offset="0.07"/>
 	<GradientStop Color="#E3E9EF" Offset="1"/>
 </LinearGradientBrush>
+    
+    
 <Style TargetType="{x:Type TextBox}">
 	<Setter Property="Foreground" Value="{DynamicResource Text_dark_}"/>
 	<Setter Property="Background" Value="#55FFFFFF"/>
@@ -1832,7 +1829,6 @@
 	<Setter Property="AllowDrop" Value="true"/>
 	<Setter Property="Height" Value="30"/>
 	<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-	<Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
 	<Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
 	<Setter Property="Template">
 		<Setter.Value>
@@ -1854,12 +1850,9 @@
 							<SolidColorBrush Color="{StaticResource CheckBox_stroke_color}"/>
 						</Rectangle.Stroke>
 					</Rectangle>
-					<Grid VerticalAlignment="Center" Margin="{TemplateBinding Padding}">
-						<ScrollViewer x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" VerticalContentAlignment="Center" VerticalScrollBarVisibility="Hidden" Margin="{TemplateBinding Padding}" PanningMode="VerticalFirst" Grid.IsSharedSizeScope="True" CanContentScroll="True">
-							<ScrollViewer.Foreground>
-								<SolidColorBrush Color="{DynamicResource Text_dark}"/>
-							</ScrollViewer.Foreground>
-						</ScrollViewer>
+                        <Grid Margin="{TemplateBinding Padding}">
+                            <ScrollViewer  x:Name="PART_ContentHost"  BorderThickness="0" IsTabStop="False" Margin="1"
+                                        Padding="{TemplateBinding Padding}" Foreground="{DynamicResource Text_dark}" CanContentScroll="False" />
 					</Grid></Grid>
 				<ControlTemplate.Triggers>
 					<Trigger Property="IsEnabled" Value="false">
