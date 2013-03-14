@@ -21,11 +21,14 @@ There are some ways to use it.
 </Application.Resources>
 ```
 * Copy Theme/MoonUICore.xaml to your Application. Add reference in your code:
-```csharp
+
+```
 this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("Theme/MoonUICore.xaml.xaml", UriKind.RelativeOrAbsolute) });
 ```
+
 * Compile sample project. Add reference in your application to compiled sample program. Add reference in your code:
-```csharp
+
+```
 this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("/MoonUI_Net4;component/Theme/MoonUICore.xaml.xaml", UriKind.RelativeOrAbsolute) });
 ```
 
