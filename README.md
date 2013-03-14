@@ -28,6 +28,7 @@ this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Ur
 ```csharp
 this.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri("/MoonUI_Net4;component/Theme/MoonUICore.xaml.xaml", UriKind.RelativeOrAbsolute) });
 ```
+
 ==========
 Notes
 ==========
