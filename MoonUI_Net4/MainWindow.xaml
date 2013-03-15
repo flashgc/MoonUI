@@ -10,9 +10,9 @@
 
 	<Grid x:Name="LayoutRoot">
 
-        <Button Content="Обычная" HorizontalAlignment="Left" Margin="57,36.84,0,0" VerticalAlignment="Top" Width="102.2" Height="40.16" HorizontalContentAlignment="Center"/>
-        <Button Content="Синяя" UseLayoutRounding="True" HorizontalAlignment="Left" Margin="57,81,0,0" VerticalAlignment="Top" Width="102.2" Height="40.16" HorizontalContentAlignment="Center" Style="{DynamicResource ButtonBlue}"/>
-		<Button Content="Зеленая" UseLayoutRounding="True" HorizontalAlignment="Left" Margin="57,125,0,0" VerticalAlignment="Top" Width="102.2" Height="40.16" HorizontalContentAlignment="Center" Style="{DynamicResource ButtonGreen}"  />
+        <Button Content="Обычная" HorizontalAlignment="Left" Margin="57,36.84,0,0" VerticalAlignment="Top" Width="102.2" Height="40" HorizontalContentAlignment="Center"/>
+        <Button Content="Синяя" UseLayoutRounding="True" HorizontalAlignment="Left" Margin="57,81,0,0" VerticalAlignment="Top" Width="102.2" Height="40" HorizontalContentAlignment="Center" Style="{DynamicResource ButtonBlue}"/>
+		<Button Content="Зеленая" UseLayoutRounding="True" HorizontalAlignment="Left" Margin="57,125,0,0" VerticalAlignment="Top" Width="102.2" Height="40" HorizontalContentAlignment="Center" Style="{DynamicResource ButtonGreen}"  />
 		<Button Content="Оранжевая" UseLayoutRounding="True" HorizontalAlignment="Left" Margin="57,169,0,0" VerticalAlignment="Top" Width="102.2" Height="40.16" HorizontalContentAlignment="Center" Style="{DynamicResource ButtonOrange}"/>
         <Button IsEnabled="False" UseLayoutRounding="True" Content="Обычная" HorizontalAlignment="Left" Margin="163,37,0,0" Width="102" HorizontalContentAlignment="Center" Height="40" VerticalAlignment="Top" Name="BTN1" />
         <Button IsEnabled="False" UseLayoutRounding="True" Content="Синяя" HorizontalAlignment="Left" Margin="163.2,81,0,0" VerticalAlignment="Top" Width="102.2" Height="40.16" HorizontalContentAlignment="Center" Style="{DynamicResource ButtonBlue}" Name="BTN2" />
@@ -39,8 +39,8 @@
         </ListBox>
 		<RadioButton Content="Увеличенная" Margin="158,0,0,44" VerticalAlignment="Bottom" HorizontalAlignment="Left" Style="{DynamicResource RadioButtonLarge}" />
 		<RadioButton IsEnabled="False" Content="Отключенная" HorizontalAlignment="Left" Margin="57,0,0,20" VerticalAlignment="Bottom" />
-		<TextBox HorizontalAlignment="Right" Margin="0,0,191.046,76" TextWrapping="Wrap" Text="Текст" VerticalAlignment="Bottom" d:LayoutOverrides="Height" Width="119.953" Grid.Row="1" />
-		<TextBox IsEnabled="False" HorizontalAlignment="Right" Margin="0,0,69.4,76" TextWrapping="Wrap" Text="Текст (отключен)" VerticalAlignment="Bottom" Width="107.199" d:LayoutOverrides="Height" Grid.Row="1" />
+		<TextBox HorizontalAlignment="Right" Margin="0,0,200,76" TextWrapping="Wrap" Text="ТекстБокс" VerticalAlignment="Bottom" d:LayoutOverrides="Height" Width="111" />
+		<TextBox IsEnabled="False" HorizontalAlignment="Right" Margin="0,0,64,76" TextWrapping="Wrap" Text="ТекстБокс (отключен)" VerticalAlignment="Bottom" Width="130" d:LayoutOverrides="Height" />
         <ComboBox Margin="0,0,71,320" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="241.2" SelectedIndex="0">
             <ComboBoxItem Content="Элемент 1" />
             <ComboBoxItem Content="Элемент 2" />
@@ -52,5 +52,6 @@
             <ComboBoxItem Content="Элемент 1" />
             <ComboBoxItem Content="Элемент 2" />
         </ComboBox>
+        <Button Content="Нажатая" Height="40" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="314,377,0,0" VerticalAlignment="Top" Width="102.2" />
     </Grid>
 </Window>

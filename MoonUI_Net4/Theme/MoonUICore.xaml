@@ -127,7 +127,8 @@
 							VerticalAlignment="Center" x:Name="textBlock1" Margin="0,0.5,0,-1" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
 						<TextBlock HorizontalAlignment="Stretch"
 							VerticalAlignment="Center" x:Name="textBlock" Margin="0" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="{StaticResource Text_dark_}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" Padding="{TemplateBinding Padding}"/>
-					</Grid>
+                        <ContentPresenter x:Name="ContentPresnt" TextElement.Foreground="Transparent" TextBlock.Foreground="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                    </Grid>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -211,10 +212,11 @@
 						</Rectangle>
 						<Path x:Name="path" Data="M2.75,4.66667 L121.083,4.66667" Fill="White" Margin="2.5,1.334,2.5,0" Stretch="Fill" Stroke="#FFD9FA73" UseLayoutRounding="False" Height="1" VerticalAlignment="Top"/>
 						<TextBlock HorizontalAlignment="Stretch"
-							VerticalAlignment="Center" x:Name="textBlock1" Margin="6,9.5,6.5,7" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+							VerticalAlignment="Center" x:Name="textBlock1" Margin="0,1.5,0,-1.5" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
 						<TextBlock HorizontalAlignment="Stretch"
-							VerticalAlignment="Center" x:Name="textBlock" Margin="6,8,6,9" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
-					</Grid>
+							VerticalAlignment="Center" x:Name="textBlock" Margin="0" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+                        <ContentPresenter TextElement.Foreground="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                    </Grid>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -302,10 +304,11 @@
 							</Path.Stroke>
 						</Path>
 						<TextBlock HorizontalAlignment="Stretch"
-							VerticalAlignment="Center" x:Name="textBlock1" Margin="6,9,6,7" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" RenderTransformOrigin="0.5,0.5"/>
+							VerticalAlignment="Center" x:Name="textBlock1" Margin="0,1.5,0,-1.5" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" RenderTransformOrigin="0.5,0.5"/>
 						<TextBlock HorizontalAlignment="Stretch"
-							VerticalAlignment="Center" x:Name="textBlock" Margin="6,8,6,9" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
-					</Grid>
+							VerticalAlignment="Center" x:Name="textBlock" Margin="0" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+                        <ContentPresenter TextElement.Foreground="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                    </Grid>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -395,10 +398,11 @@
 							</Path.Stroke>
 						</Path>
 						<TextBlock HorizontalAlignment="Stretch"
-							VerticalAlignment="Center" x:Name="textBlock1" Margin="6,9.5,6.5,7" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+							VerticalAlignment="Center" x:Name="textBlock1" Margin="0,1.5,0,-1.5" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="#39000000" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
 						<TextBlock HorizontalAlignment="Stretch"
-							VerticalAlignment="Center" x:Name="textBlock" Margin="6,8,6,9" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
-					</Grid>
+							VerticalAlignment="Center" x:Name="textBlock" Margin="0" TextWrapping="Wrap" Text="{TemplateBinding Content}" TextAlignment="Center" Foreground="White" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}"/>
+                        <ContentPresenter TextElement.Foreground="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" />
+                    </Grid>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -1723,14 +1727,14 @@
 							<ColumnDefinition/>
 							<ColumnDefinition/>
 						</Grid.ColumnDefinitions>
-						<Border x:Name="ChTglBorderON" CornerRadius="4" Margin="1,0,0,1" BorderThickness="1">
+						<Border x:Name="ChTglBorderON" CornerRadius="3" Margin="1,0,0,1" BorderThickness="1">
 							<Border.BorderBrush>
 								<SolidColorBrush Color="{DynamicResource CheckBox_stroke_color}"/>
 							</Border.BorderBrush>
 							<Border.Background>
 								<SolidColorBrush Color="{DynamicResource Fill_active_bottom}"/>
 							</Border.Background></Border>
-						<Border x:Name="ChTglBorderOFF" Grid.Column="1" CornerRadius="4" Margin="0,0,1,1" BorderThickness="1">
+						<Border x:Name="ChTglBorderOFF" Grid.Column="1" CornerRadius="3" Margin="0,0,1,1" BorderThickness="1">
 							<Border.BorderBrush>
 								<SolidColorBrush Color="{DynamicResource Text_dark}"/>
 							</Border.BorderBrush>
@@ -1741,11 +1745,11 @@
 								</LinearGradientBrush>
 							</Border.Background>
 						</Border>
-						<TextBlock Grid.Column="1" Text="OFF" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="0,0,6,0" FontSize="8" FontWeight="Bold">
+                            <TextBlock SnapsToDevicePixels="True" Grid.Column="1" Text="OFF" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="0,0,6,0" FontSize="8" FontWeight="Bold">
 							<TextBlock.Foreground>
 								<SolidColorBrush Color="{DynamicResource TextBox_fill}"/>
 							</TextBlock.Foreground></TextBlock>
-							<TextBlock Grid.Column="0" Text="ON" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="6,0,0,0" FontSize="8" FontWeight="Bold">
+							<TextBlock SnapsToDevicePixels="True" Grid.Column="0" Text="ON" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="6,0,0,0" FontSize="8" FontWeight="Bold">
 							<TextBlock.Foreground>
 								<SolidColorBrush Color="{DynamicResource TextBox_fill}"/>
 							</TextBlock.Foreground></TextBlock>
